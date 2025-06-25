@@ -1,15 +1,5 @@
 #include "Archer.hpp"
 
-Archer::Archer()
-{
-	type = "Archer";
-	name = "Name";
-	damage = 10;
-	health = 100;
-	armor = 50;
-	armorLevel = 3;
-}
-
 Archer::Archer(const int &al, const string &n, const int &d, const int &h, const int &a)
 {
 	type = "Archer";
@@ -18,25 +8,6 @@ Archer::Archer(const int &al, const string &n, const int &d, const int &h, const
 	health = h;
 	armor = a;
 	armorLevel = al;
-}
-
-Archer &Archer::operator=(const Archer &other)
-{
-	if (this != &other)
-	{
-		name = other.name;
-		type = other.type;
-		health = other.health;
-		damage = other.damage;
-		armor = other.armor;
-		armorLevel = other.armorLevel;
-	}
-	return (*this);
-}
-
-Archer::Archer(const Archer &other)
-{
-	*this = other;
 }
 
 Archer::~Archer() {}
